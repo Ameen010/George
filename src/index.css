@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", serif;
+  
+  --color-brand-bg: #0F0E0C;
+  --color-brand-sidebar: #0A0908;
+  --color-brand-card: #181715;
+  --color-brand-accent: #C5A059;
+  --color-brand-text-primary: #E5DFD3;
+  --color-brand-text-secondary: #9B9488;
+  --color-brand-border: rgba(197, 160, 89, 0.15);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text-primary font-sans antialiased selection:bg-brand-accent/30;
+  }
+}
+
+.offset-border {
+  position: relative;
+}
+
+.offset-border::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: -15px;
+  bottom: -15px;
+  border: 1px solid var(--color-brand-accent);
+  z-index: -1;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-brand-border);
+}
