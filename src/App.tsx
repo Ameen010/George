@@ -24,8 +24,8 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-import logoSymbol from './logo.png';
-import logoWordmark from './LOGO WITH WORDMARK.png';
+import logoSymbol from './orgvein new logo.png';
+import logoWordmark from './orgvein new wordmark.png';
 import portraitImg from './george image.jpeg';
 
 const SOCIAL_LINKS = [
